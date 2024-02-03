@@ -1,0 +1,129 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3498db; /* Bleu */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+nav {
+    background-color: #2980b9; /* Bleu plus foncé */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #2c3e50; /* Bleu-gris au survol */
+}
+
+.container {
+    padding: 20px;
+}
+
+.tab-content {
+    background-color: #ecf0f1; /* Gris clair */
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #3498db; /* Bleu */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+button {
+    background-color: #3498db; /* Bleu */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #2980b9; /* Bleu plus foncé au survol */
+}
+
+#errorDiv {
+    background-color: #ffcccc; /* Couleur de fond rouge clair */
+    color: #cc0000; /* Couleur du texte rouge foncé */
+    padding: 10px; /* Espacement intérieur */
+    margin-bottom: 10px; /* Marge en bas pour l'espacement avec d'autres éléments */
+    border: 1px solid #cc0000; /* Bordure rouge foncé */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+/* Style pour les liens rouges */
+.red-link {
+    color: #cc0000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* Style de base pour les liens stylisés en tant que boutons */
+.blue_button {
+    color: #3498db; /* Couleur du texte */
+    background-color: transparent; /* Fond transparent par défaut */
+    border: 1px solid #3498db; /* Bordure avec la couleur du texte */
+    padding: 8px 16px; /* Espacement interne */
+    cursor: pointer; /* Curseur indiquant que c'est interactif */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transitions fluides */
+}
+
+/* Style au survol */
+.blue_button:hover {
+    color: #fff; /* Nouvelle couleur du texte lors du survol */
+    background-color: #3498db; /* Nouvelle couleur de fond lors du survol */
+}
+
+
+/* Style de base pour les liens stylisés en tant que boutons */
+.red_button {
+    color: #bc2222; /* Couleur du texte */
+    background-color: transparent; /* Fond transparent par défaut */
+    border: 1px solid #570a0a; /* Bordure avec la couleur du texte */
+    padding: 8px 16px; /* Espacement interne */
+    cursor: pointer; /* Curseur indiquant que c'est interactif */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transitions fluides */
+}
+
+/* Style au survol */
+.red_button:hover {
+    color: #fff; /* Nouvelle couleur du texte lors du survol */
+    background-color: rgb(232, 110, 110); /* Nouvelle couleur de fond lors du survol */
+}
