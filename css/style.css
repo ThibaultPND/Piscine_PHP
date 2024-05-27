@@ -5,14 +5,14 @@ body {
 }
 
 header {
-    background-color: #3498db; /* Bleu */
-    color: #fff;
+    background-color: rgb(16, 129, 37);
+    color: #6a831f;
     text-align: center;
     padding: 10px;
 }
 
 nav {
-    background-color: #2980b9; /* Bleu plus foncé */
+    background-color:rgb(6, 4, 47); /* Bleu plus foncé */
 }
 
 nav ul {
@@ -126,4 +126,36 @@ button:hover {
 .red_button:hover {
     color: #fff; /* Nouvelle couleur du texte lors du survol */
     background-color: rgb(232, 110, 110); /* Nouvelle couleur de fond lors du survol */
+}
+
+.pool-status {
+    display: flex;
+    flex-direction: column;
+}
+
+.data-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.data-label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.data-value {
+    font-style: italic;
+}
+
+/* Exemple d'icônes */
+.data-label::after {
+    content: ":";
+}
+
+.data-value::before {
+    content: url('icon.png');
+    margin-right: 5px;
+    height: 20px; /* Ajustez la taille de l'icône au besoin */
+    width: 20px;
 }

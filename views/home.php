@@ -1,7 +1,8 @@
 <div class="tab-content">
     <h2>Bienvenue sur la Page d'Accueil</h2>
     <p>
-        Bienvenue sur notre site dédié à la gestion de piscine. Que vous soyez un utilisateur régulier ou un gestionnaire de piscine,
+        Bienvenue sur notre site dédié à la gestion de piscine. Que vous soyez un utilisateur régulier ou un
+        gestionnaire de piscine,
         notre plateforme vous offre des fonctionnalités avancées pour assurer une expérience optimale.
     </p>
 
