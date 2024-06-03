@@ -8,6 +8,8 @@ class PoolController
     public function __construct() {
         $this->model = new PoolModel();
     }
+
+
     public function updateAlerts()
     {
         $userModel = new UserModel();
@@ -84,5 +86,18 @@ class PoolController
         } else {
             echo "Impossible de récupérer l'état actuel de la pompe.";
         }
+    }
+
+    public function getAlerts()
+    {
+        return $this->model->getAlerts();
+    }
+    public function getLimit($limitId)
+    {
+        return $this->model->getLimit($limitId);
+    }
+    public function getMessage($messageId)
+    {
+        return $this->model->getMessage($messageId);
     }
 }

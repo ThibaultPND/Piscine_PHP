@@ -1,42 +1,21 @@
 <?php
-require_once 'models/PoolModel.php';
+require_once ('controllers/PoolController.php');
+$poolController = new PoolController();
+$alerts = $poolController->getAlerts();
 
-$poolModel = new PoolModel();
-$seuilPh = $poolModel->getSeuilAlert(DataType::PH);
-$seuilTurb = $poolModel->getSeuilAlert(DataType::TURB);
-$seuilTemp = $poolModel->getSeuilAlert(DataType::TEMP);
-$seuilORP = $poolModel->getSeuilAlert(DataType::ORP);
 ?>
-
 <div class="tab-content">
     <h2>Gestion des alertes</h2>
-    <p> 
-        Seuil de pH             :  de <?php 
-        echo $seuilPh['minimum'];
-        echo " à ";
-        echo $seuilPh['maximum'];
-        echo " pH";
-        ?></br>
-        Seuil de température    : de <?php  
-        echo $seuilTemp['minimum'];
-        echo " à ";
-        echo $seuilTemp['maximum'];
-        echo " °C";
-        ?></br>
-        Seuil de turbilité      : <?php  
-        echo $seuilTurb['minimum'];
-        echo " à ";
-        echo $seuilTurb['maximum'];
-        echo " NTU";
-        ?></br>
-        Seuil de chlore         : <?php  
-        echo $seuilORP['minimum'];
-        echo " à ";
-        echo $seuilORP['maximum'];
-        echo " mg/L";
-        ?></br>
-    </p>
-
+    <?php
+    $alerts = $poolController->getAlerts();
+    foreach ($alerts as $alert) {
+        // Récupérer les détails de la limite et du message pour cette alerte spécifique
+        $limit = $poolController->getLimit($alert['Limite_ID']);
+        $message = $poolController->getMessage($alert['Message_ID']);
+    ?>
+        <p>
+            <?= $message['Message'] ?> : de <?= $limit['Value'] ?> à <?= $limit['maximum'] ?>
+        </p>
+    <?php } ?>
     <button class='blue_button' onclick="window.location.href='index.php?page=change_alerts'">Modifier</button>
-
 </div>
